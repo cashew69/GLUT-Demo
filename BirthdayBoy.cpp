@@ -1,7 +1,6 @@
 
 
 
-#include <windows.h>
 #include <iostream>
 #include <GL/glut.h>
 #include <math.h>
@@ -65,19 +64,6 @@ void drawSun(int x)
     glEnd();
     glFlush();
 
-}
-/////////////////////////////cloud
-void megh(int x) {
-    glColor3ub(200, 220, 220);
-    DrawCircle(170, 400, 25, 2000);
-    DrawCircle(200, 400, 35, 2000);
-    DrawCircle(230, 400, 25, 2000);
-
-    glColor3ub(200, 220, 220);
-    DrawCircle(300, 420, 25, 2000);
-    DrawCircle(330, 420, 35, 2000);
-    DrawCircle(360, 420, 25, 2000);
-    glFlush();
 }
 
 
@@ -911,188 +897,7 @@ void birds(int x)
     glEnd();
 }
 
-//////////////////////////the car 
-void car(int x)
-{
-    glColor3ub(255, 0, 0);///////////back
-    glBegin(GL_QUADS);
-    glVertex2i(20, 20);
-    glVertex2i(20, 40);
-    glVertex2i(10, 70);
-    glVertex2i(10, 50);
-    glEnd();
-    ////////////////////////////////line
-    glColor3ub(0, 0, 0);
-    glBegin(GL_LINES);
-    glVertex2i(20, 20);
-    glVertex2i(20, 40);
 
-    glVertex2i(20, 40);
-    glVertex2i(10, 70);
-
-    glVertex2i(10, 70);
-    glVertex2i(10, 50);
-
-    glVertex2i(10, 50);
-    glVertex2i(20, 20);
-    glEnd();
-
-    glColor3ub(255, 0, 0);/////////////
-    glBegin(GL_QUADS);
-    glVertex2i(20, 40);
-    glVertex2i(40, 40);
-    glVertex2i(29, 70);
-    glVertex2i(10, 70);
-    glEnd();
-    //////////////////////////////////line
-    glColor3ub(0, 0, 0);
-    glBegin(GL_LINES);
-    glVertex2i(20, 40);
-    glVertex2i(40, 40);
-
-    glVertex2i(40, 40);
-    glVertex2i(29, 70);
-
-    glVertex2i(29, 70);
-    glVertex2i(10, 70);
-
-    glVertex2i(20, 40);
-    glVertex2i(10, 70);
-    glEnd();
-    /////////////////
-    glColor3ub(255, 255, 255);/////////back window
-    glBegin(GL_QUADS);
-    glVertex2i(40, 40);
-    glVertex2i(55, 60);
-    glVertex2i(43, 90);
-    glVertex2i(29, 70);
-    glEnd();
-    ///////////////////////////////line
-    glColor3ub(0, 0, 0);
-    glBegin(GL_LINES);
-    glVertex2i(40, 40);
-    glVertex2i(55, 60);
-
-    glVertex2i(55, 60);
-    glVertex2i(43, 90);
-
-    glVertex2i(43, 90);
-    glVertex2i(29, 70);
-
-    glVertex2i(29, 70);
-    glVertex2i(40, 40);
-    glEnd();
-
-    ///////////////
-    glColor3ub(255, 0, 0);/////////roof
-    glBegin(GL_QUADS);
-    glVertex2i(55, 60);
-    glVertex2i(91, 60);
-    glVertex2i(77, 90);
-    glVertex2i(43, 90);
-    glEnd();
-    ///////////////////////////////////////line
-
-    glColor3ub(0, 0, 0);
-    //glLineWidth(20.0f);
-    glBegin(GL_LINES);
-    glVertex2i(55, 60);
-    glVertex2i(91, 60);
-
-    glVertex2i(91, 60);
-    glVertex2i(77, 90);
-
-    glVertex2i(77, 90);
-    glVertex2i(43, 90);
-
-    glVertex2i(43, 90);
-    glVertex2i(55, 60);
-    glEnd();
-
-    /////////////
-    glColor3ub(255, 0, 0);/////////The lower part of the door
-    glBegin(GL_QUADS);
-    glVertex2i(20, 20);
-    glVertex2i(140, 20);
-    glVertex2i(140, 40);
-    glVertex2i(20, 40);
-    glEnd();
-    ////////////////////////lines
-    glColor3ub(0, 0, 0);
-    glBegin(GL_LINES);
-    glVertex2i(20, 20);
-    glVertex2i(140, 20);
-
-    glVertex2i(140, 20);
-    glVertex2i(140, 40);
-
-    glVertex2i(140, 40);
-    glVertex2i(20, 40);
-
-    glVertex2i(20, 40);
-    glVertex2i(20, 20);
-    glEnd();
-    //////////
-
-    glColor3ub(255, 0, 0);/////////bonet
-    glBegin(GL_QUADS);
-    glVertex2i(100, 40);
-    glVertex2i(140, 40);
-    glVertex2i(124, 70);
-    glVertex2i(86, 70);
-    glEnd();
-    ///////////////////////////////////lines
-    glColor3ub(0, 0, 0);
-    glBegin(GL_LINES);
-    glVertex2i(100, 40);
-    glVertex2i(140, 40);
-
-    glVertex2i(124, 70);
-    glVertex2i(140, 40);
-
-    glVertex2i(86, 70);
-    glVertex2i(124, 70);
-
-    glVertex2i(86, 70);
-    glVertex2i(100, 40);
-    glEnd();
-    /////////////
-
-    glColor3ub(0, 0, 0);    ////////////////chakka
-    DrawCircle(50, 20, 10, 6000);//1
-    DrawCircle(100, 20, 10, 6000);//1
-
-    glColor3ub(255, 255, 255);
-    DrawCircle(50, 20, 5, 6000);//1
-    DrawCircle(100, 20, 5, 6000);//1
-    glEnd();
-
-    glColor3ub(227, 247, 244);    /////////doors
-    glBegin(GL_POLYGON);
-    glVertex2i(40, 40);
-    glVertex2i(100, 40);
-    glVertex2i(91, 60);
-    glVertex2i(55, 60);
-    glEnd();
-    ///////////////////////////lines
-    glColor3ub(0, 0, 0);
-    glBegin(GL_LINES);
-    glVertex2i(40, 40);
-    glVertex2i(100, 40);
-
-    glVertex2i(100, 40);
-    glVertex2i(91, 60);
-
-    glVertex2i(91, 60);
-    glVertex2i(55, 60);
-
-    glVertex2i(55, 60);
-    glVertex2i(40, 40);
-
-    glVertex2i(72, 40);
-    glVertex2i(72, 60);
-    glEnd();
-}
 //////////move car
 void movecar()
 {
@@ -1104,10 +909,374 @@ void movecar()
     {
         carX = -20;
     }
-    glPushMatrix();
-    glTranslatef(carX, carY, 0);
-    car(1);
-    glPopMatrix();
+
+    glColor3ub(255, 0, 0);///////////back
+    glBegin(GL_QUADS);
+    glVertex2i(20+carX, 20);
+    glVertex2i(20+carX, 40);
+    glVertex2i(10+carX, 70);
+    glVertex2i(10+carX, 50);
+    glEnd();
+
+    glColor3ub(255, 0, 0);///////////back
+    glBegin(GL_QUADS);
+    glVertex2i(-20+carX, -20);
+    glVertex2i(-20+carX, -40);
+    glVertex2i(-10+carX, -70);
+    glVertex2i(-10+carX, -50);
+    glEnd();
+
+    ////////////////////////////////line
+    glColor3ub(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(20+carX, 20);
+    glVertex2i(20+carX, 40);
+
+    glVertex2i(20+carX, 40);
+    glVertex2i(10+carX, 70);
+
+    glVertex2i(10+carX, 70);
+    glVertex2i(10+carX, 50);
+
+    glVertex2i(10+carX, 50);
+    glVertex2i(20+carX, 20);
+    glEnd();
+
+    glColor3ub(255, 0, 0);/////////////
+    glBegin(GL_QUADS);
+    glVertex2i(20+carX, 40);
+    glVertex2i(40+carX, 40);
+    glVertex2i(29+carX, 70);
+    glVertex2i(10+carX, 70);
+    glEnd();
+    //////////////////////////////////line
+    glColor3ub(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(20+carX, 40);
+    glVertex2i(40+carX, 40);
+
+    glVertex2i(40+carX, 40);
+    glVertex2i(29+carX, 70);
+
+    glVertex2i(29+carX, 70);
+    glVertex2i(10+carX, 70);
+
+    glVertex2i(20+carX, 40);
+    glVertex2i(10+carX, 70);
+    glEnd();
+    /////////////////
+    glColor3ub(255, 255, 255);/////////back window
+    glBegin(GL_QUADS);
+    glVertex2i(40+carX, 40);
+    glVertex2i(55+carX, 60);
+    glVertex2i(43+carX, 90);
+    glVertex2i(29+carX, 70);
+    glEnd();
+    ///////////////////////////////line
+    glColor3ub(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(40+carX, 40);
+    glVertex2i(55+carX, 60);
+
+    glVertex2i(55+carX, 60);
+    glVertex2i(43+carX, 90);
+
+    glVertex2i(43+carX, 90);
+    glVertex2i(29+carX, 70);
+
+    glVertex2i(29+carX, 70);
+    glVertex2i(40+carX, 40);
+    glEnd();
+
+    ///////////////
+    glColor3ub(255, 0, 0);/////////roof
+    glBegin(GL_QUADS);
+    glVertex2i(55+carX, 60);
+    glVertex2i(91+carX, 60);
+    glVertex2i(77+carX, 90);
+    glVertex2i(43+carX, 90);
+    glEnd();
+    ///////////////////////////////////////line
+
+    glColor3ub(0, 0, 0);
+    //glLineWidth(20.0f);
+    glBegin(GL_LINES);
+    glVertex2i(55+carX, 60);
+    glVertex2i(91+carX, 60);
+
+    glVertex2i(91+carX, 60);
+    glVertex2i(77+carX, 90);
+
+    glVertex2i(77+carX, 90);
+    glVertex2i(43+carX, 90);
+
+    glVertex2i(43+carX, 90);
+    glVertex2i(55+carX, 60);
+    glEnd();
+
+    /////////////
+    glColor3ub(255, 0, 0);/////////The lower part of the door
+    glBegin(GL_QUADS);
+    glVertex2i(20+carX, 20);
+    glVertex2i(140+carX, 20);
+    glVertex2i(140+carX, 40);
+    glVertex2i(20+carX, 40);
+    glEnd();
+    ////////////////////////lines
+    glColor3ub(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(20+carX, 20);
+    glVertex2i(140+carX, 20);
+
+    glVertex2i(140+carX, 20);
+    glVertex2i(140+carX, 40);
+
+    glVertex2i(140+carX, 40);
+    glVertex2i(20+carX, 40);
+
+    glVertex2i(20+carX, 40);
+    glVertex2i(20+carX, 20);
+    glEnd();
+    //////////
+
+    glColor3ub(255, 0, 0);/////////bonet
+    glBegin(GL_QUADS);
+    glVertex2i(100+carX, 40);
+    glVertex2i(140+carX, 40);
+    glVertex2i(124+carX, 70);
+    glVertex2i(86+carX, 70);
+    glEnd();
+    ///////////////////////////////////lines
+    glColor3ub(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(100+carX, 40);
+    glVertex2i(140+carX, 40);
+
+    glVertex2i(124+carX, 70);
+    glVertex2i(140+carX, 40);
+
+    glVertex2i(86+carX, 70);
+    glVertex2i(124+carX, 70);
+
+    glVertex2i(86+carX, 70);
+    glVertex2i(100+carX, 40);
+    glEnd();
+    /////////////
+
+    glColor3ub(0, 0, 0);    ////////////////chakka
+    DrawCircle(50+carX, 20, 10, 6000);//1
+    DrawCircle(100+carX, 20, 10, 6000);//1
+
+    glColor3ub(255, 255, 255);
+    DrawCircle(50+carX, 20, 5, 6000);//1
+    DrawCircle(100+carX, 20, 5, 6000);//1
+    glEnd();
+
+    glColor3ub(227, 247, 244);    /////////doors
+    glBegin(GL_POLYGON);
+    glVertex2i(40+carX, 40);
+    glVertex2i(100+carX, 40);
+    glVertex2i(91+carX, 60);
+    glVertex2i(55+carX, 60);
+    glEnd();
+    ///////////////////////////lines
+    glColor3ub(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(40+carX, 40);
+    glVertex2i(100+carX, 40);
+
+    glVertex2i(100+carX, 40);
+    glVertex2i(91+carX, 60);
+
+    glVertex2i(91+carX, 60);
+    glVertex2i(55+carX, 60);
+
+    glVertex2i(55+carX, 60);
+    glVertex2i(40+carX, 40);
+
+    glVertex2i(72+carX, 40);
+    glVertex2i(72+carX, 60);
+    glEnd();
+
+    glColor3ub(255, 0, 0);///////////back
+    glBegin(GL_QUADS);
+    glVertex2i(20+carX, 20);
+    glVertex2i(20+carX, 40);
+    glVertex2i(10+carX, 70);
+    glVertex2i(10+carX, 50);
+    glEnd();
+    ////////////////////////////////line
+    glColor3ub(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(20+carX, 20);
+    glVertex2i(20+carX, 40);
+
+    glVertex2i(20+carX, 40);
+    glVertex2i(10+carX, 70);
+
+    glVertex2i(10+carX, 70);
+    glVertex2i(10+carX, 50);
+
+    glVertex2i(10+carX, 50);
+    glVertex2i(20+carX, 20);
+    glEnd();
+
+    glColor3ub(255, 0, 0);/////////////
+    glBegin(GL_QUADS);
+    glVertex2i(20+carX, 40);
+    glVertex2i(40+carX, 40);
+    glVertex2i(29+carX, 70);
+    glVertex2i(10+carX, 70);
+    glEnd();
+    //////////////////////////////////line
+    glColor3ub(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(20+carX, 40);
+    glVertex2i(40+carX, 40);
+
+    glVertex2i(40+carX, 40);
+    glVertex2i(29+carX, 70);
+
+    glVertex2i(29+carX, 70);
+    glVertex2i(10+carX, 70);
+
+    glVertex2i(20+carX, 40);
+    glVertex2i(10+carX, 70);
+    glEnd();
+    /////////////////
+    glColor3ub(255, 255, 255);/////////back window
+    glBegin(GL_QUADS);
+    glVertex2i(40+carX, 40);
+    glVertex2i(55+carX, 60);
+    glVertex2i(43+carX, 90);
+    glVertex2i(29+carX, 70);
+    glEnd();
+    ///////////////////////////////line
+    glColor3ub(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(40+carX, 40);
+    glVertex2i(55+carX, 60);
+
+    glVertex2i(55+carX, 60);
+    glVertex2i(43+carX, 90);
+
+    glVertex2i(43+carX, 90);
+    glVertex2i(29+carX, 70);
+
+    glVertex2i(29+carX, 70);
+    glVertex2i(40+carX, 40);
+    glEnd();
+
+    ///////////////
+    glColor3ub(255, 0, 0);/////////roof
+    glBegin(GL_QUADS);
+    glVertex2i(55+carX, 60);
+    glVertex2i(91+carX, 60);
+    glVertex2i(77+carX, 90);
+    glVertex2i(43+carX, 90);
+    glEnd();
+    ///////////////////////////////////////line
+
+    glColor3ub(0, 0, 0);
+    //glLineWidth(20.0f);
+    glBegin(GL_LINES);
+    glVertex2i(55+carX, 60);
+    glVertex2i(91+carX, 60);
+
+    glVertex2i(91+carX, 60);
+    glVertex2i(77+carX, 90);
+
+    glVertex2i(77+carX, 90);
+    glVertex2i(43+carX, 90);
+
+    glVertex2i(43+carX, 90);
+    glVertex2i(55+carX, 60);
+    glEnd();
+
+    /////////////
+    glColor3ub(255, 0, 0);/////////The lower part of the door
+    glBegin(GL_QUADS);
+    glVertex2i(20+carX, 20);
+    glVertex2i(140+carX, 20);
+    glVertex2i(140+carX, 40);
+    glVertex2i(20+carX, 40);
+    glEnd();
+    ////////////////////////lines
+    glColor3ub(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(20+carX, 20);
+    glVertex2i(140+carX, 20);
+
+    glVertex2i(140+carX, 20);
+    glVertex2i(140+carX, 40);
+
+    glVertex2i(140+carX, 40);
+    glVertex2i(20+carX, 40);
+
+    glVertex2i(20+carX, 40);
+    glVertex2i(20+carX, 20);
+    glEnd();
+    //////////
+
+    glColor3ub(255, 0, 0);/////////bonet
+    glBegin(GL_QUADS);
+    glVertex2i(100+carX, 40);
+    glVertex2i(140+carX, 40);
+    glVertex2i(124+carX, 70);
+    glVertex2i(86+carX, 70);
+    glEnd();
+    ///////////////////////////////////lines
+    glColor3ub(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(100+carX, 40);
+    glVertex2i(140+carX, 40);
+
+    glVertex2i(124+carX, 70);
+    glVertex2i(140+carX, 40);
+
+    glVertex2i(86+carX, 70);
+    glVertex2i(124+carX, 70);
+
+    glVertex2i(86+carX, 70);
+    glVertex2i(100+carX, 40);
+    glEnd();
+    /////////////
+
+    glColor3ub(0, 0, 0);    ////////////////chakka
+    DrawCircle(50+carX, 20, 10, 6000);//1
+    DrawCircle(100+carX, 20, 10, 6000);//1
+
+    glColor3ub(255, 255, 255);
+    DrawCircle(50+carX, 20, 5, 6000);//1
+    DrawCircle(100+carX, 20, 5, 6000);//1
+    glEnd();
+
+    glColor3ub(227, 247, 244);    /////////doors
+    glBegin(GL_POLYGON);
+    glVertex2i(40+carX, 40);
+    glVertex2i(100+carX, 40);
+    glVertex2i(91+carX, 60);
+    glVertex2i(55+carX, 60);
+    glEnd();
+    ///////////////////////////lines
+    glColor3ub(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(40+carX, 40);
+    glVertex2i(100+carX, 40);
+
+    glVertex2i(100+carX, 40);
+    glVertex2i(91+carX, 60);
+
+    glVertex2i(91+carX, 60);
+    glVertex2i(55+carX, 60);
+
+    glVertex2i(55+carX, 60);
+    glVertex2i(40+carX, 40);
+
+    glVertex2i(72+carX, 40);
+    glVertex2i(72+carX, 60);
+    glEnd();
+
 }
 //////////////////////////////////////////////////move the cloud
 void movemegh()
@@ -1120,11 +1289,18 @@ void movemegh()
     {
         meghX = -200;
     }
-    glPushMatrix();
-    glTranslatef(meghX, meghY, 0);
-    megh(1);
-    glPopMatrix();
+
+    glColor3ub(200, 220, 220);
+    DrawCircle(170+meghX, 400, 25, 2000);
+    DrawCircle(200+meghX, 400, 35, 2000);
+    DrawCircle(230+meghX, 400, 25, 2000);
+
+    glColor3ub(200, 220, 220);
+    DrawCircle(300+meghX, 420, 25, 2000);
+    DrawCircle(330+meghX, 420, 35, 2000);
+    DrawCircle(360+meghX, 420, 25, 2000);
     glFlush();
+
 }
 ////////////////////////////////////////////////////move  the  water
 void movewater()
@@ -1176,6 +1352,12 @@ void movebirds()
     glTranslatef(birdsX, birdsY, 0);
     birds(1);
     glPopMatrix();
+}
+
+void moveshadows()
+{
+    mountain();
+
 }
 void myDisplay(void)
 {
